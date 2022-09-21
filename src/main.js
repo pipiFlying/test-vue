@@ -1,9 +1,16 @@
 import Vue from "vue";
+import ElementUI from "element-ui";
+import "element-ui/lib/theme-chalk/index.css";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
+// import RouterPlugin from "./plugins/router-plugin-one";
+import TestPlugin from "./plugins/test-plugin-access";
 
 Vue.config.productionTip = false;
+Vue.use(ElementUI);
+Vue.use(TestPlugin);
+// Vue.use(RouterPlugin);
 
 new Vue({
   router,
